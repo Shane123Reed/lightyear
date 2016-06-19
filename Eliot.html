@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buzz Lightyear</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+<br>
+
+<div id="header">Buzz Lightyear</div>
+<br>
+
+<div id="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <div class="zurg"></div>
+</div>
+
+
+
+
+
+<style media="screen" type="text/css">
+
+body {
+   cursor: url(http://img.photobucket.com/albums/v511/joeshabadoo/MegaMan-Running.gif), auto;
+}
+
+#header {
+    font-size: 26px;
+    text-align: center;
+    color: rgb(0,215,0);
+    font-family: Futura;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+
+}
+
+.box {
+    height: 180px;
+    width: 180px;
+    border: 1px solid green;
+    background-color: rgb(0,215,0);
+    display: inline-block;
+    
+}
+
+.box-red {
+    height: 180px;
+    width: 180px;
+    border: 1px solid green;
+    background-color: rgb(0,215,0);
+    display: inline-block;
+    background-size: cover;
+    background-image: url('https://pbs.twimg.com/media/CKZGwKNUYAERQU9.png');
+}
+
+.zurg {
+    float: top;
+    position: absolute;
+    top: 78px;
+    display: none;
+    height: 560px;
+    width: 560px;
+    background-size: cover;
+    background-image: url('http://static.comicvine.com/uploads/scale_small/8/80778/1515078-zurg.jpg');
+}
+
+#email {
+    position: relative;
+    top: 10px;
+    height: 50px;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    border: .25em solid rgb(240,240,240);
+    background-color: rgb(250,250,250);
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-weight: lighter;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline-style: none;
+}
+
+#container {
+    width: 560px;
+    margin: 0 auto;
+}
+
+#product img {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#download img {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#download {
+    display: none;
+}
+
+#trouble {
+    position: relative;
+    top: 10px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-weight: lighter;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    width: 190px;
+    height: auto;
+}
+
+.lookmarked {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(245, 160, 0, .8);
+  opacity: 1.0;
+  z-index: 2147483646;
+}
+
+
+</style>
+
+
+
+<script type="text/javascript">
+  
+$(function(){
+
+    $('body').on("click", '.box', function() {
+        $(this).toggleClass( "box-red" );
+        if( $('.box-red').length == 9 ){
+          $('.zurg').css({ display: 'block' });
+        }
+     });
+
+
+
+   
+
+
+});
+
+</script>
+</body>
+</html>
